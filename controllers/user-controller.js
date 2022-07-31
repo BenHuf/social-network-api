@@ -50,16 +50,20 @@ const userController = {
 
   // delete user
   deleteUser({ params }, res) {
-    User.findOneAndDelete({ _id: params.id })
+    User.findOneAndUpdate(
+        { _id: params.id },
+        { $pull: thoughts }
+      )
+      .then(User.findOneAndDelete({ _id: params.id })
       .then(dbUserData => res.json(dbUserData))
-      .catch(err => res.json(err));
+      .catch(err => res.json(err)));
   },
 
   // add friend
-  addFriend({ params }, res) {
-    User.findOneAndUpdate(
+addFriend({ params }, res) {
+  User.findOneAndUpdate(
       { _id: params.id},
-      { $push: { friends: params.friendId} },
+      {$addToSet: { friends: params.friendId }},
       { new: true, runValidators: true }
     )
     .then(dbUserData => {
