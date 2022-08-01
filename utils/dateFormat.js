@@ -96,3 +96,5 @@ module.exports = (
 
   return formattedTimeStamp;
 };
+
+// Thanks to lerantino for providing this util!
