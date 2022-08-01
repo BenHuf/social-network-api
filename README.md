@@ -26,7 +26,7 @@ To interact with the api you can use Insomnia to send requests. </br>
 All routes and methods can be found in the routes directory of the project. </br>
 
 ## GitHub Page Link
-[https://github.com/BenHuf/e-commerce-backend](https://github.com/BenHuf/social-network-api)
+[https://github.com/BenHuf/social-network-api](https://github.com/BenHuf/social-network-api)
 
 ## Contribution
 BenHuf (Benjamin Huffman) [https://github.com/BenHuf](https://github.com/BenHuf) </br>
